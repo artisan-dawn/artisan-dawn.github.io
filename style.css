@@ -1,5 +1,5 @@
 html {
-    height: 100%; /* Ensures the html element covers the entire viewport height */
+    height: 100%;
 }
 
 body {
@@ -8,7 +8,7 @@ body {
     font-family: 'Lato', sans-serif;
     background: radial-gradient(ellipse at bottom, #182028 0%, #111214 100%);
     overflow: hidden;
-    min-height: 100vh; /* Minimum height of 100% of the viewport height */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,7 +19,7 @@ body {
 
 .logo-container {
     width: 66%;
-    max-width: 1792px; /* Adjust based on actual logo size */
+    max-width: 1792px;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -42,27 +42,36 @@ body {
     margin: 20px;
     color: white;
     text-decoration: none;
-    font-size:xx-large;
+    font-size: xx-large;
     font-family: 'Young Serif', serif;
-    font-weight: 400; /* Slightly thicker text */
+    font-weight: 400;
     background: linear-gradient(white, #72673b);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    padding: 5px 10px; /* Padding for better border appearance */
+    padding: 5px 10px;
+    opacity: 0; /* Start with hidden links */
+    transform: translateY(-20px); /* Start slightly higher */
+    animation: fadeInDown 1s ease forwards; /* Animation applied */
 }
 
+@keyframes fadeInDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 footer {
     position: absolute;
     bottom: 10px;
-    right: 10px; /* Align to the right */
-    width: auto; /* Auto width to fit the content */
-    text-align: right; /* Align text to the right */
+    right: 10px;
+    width: auto;
+    text-align: right;
 }
 
 footer p {
-    font-size: 0.8em;
+    font-size: 1.0em;
     font-family: 'Young Serif', serif;
-    color: white;
-    margin: 0; /* Remove any default margin */
+    color: rgb(187, 187, 187);
+    margin: 0;
 }
