@@ -1,0 +1,68 @@
+html {
+    height: 100%; /* Ensures the html element covers the entire viewport height */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    background: radial-gradient(ellipse at bottom, #182028 0%, #111214 100%);
+    overflow: hidden;
+    min-height: 100vh; /* Minimum height of 100% of the viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.logo-container {
+    width: 66%;
+    max-width: 1792px; /* Adjust based on actual logo size */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#logo {
+    width: 100%;
+    opacity: 0;
+    transform: translateY(-100px);
+    animation: fadeInDrop 1s ease forwards;
+}
+
+@keyframes fadeInDrop {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.links a {
+    display: inline-block;
+    margin: 20px;
+    color: white;
+    text-decoration: none;
+    font-size:xx-large;
+    font-family: 'Young Serif', serif;
+    font-weight: 400; /* Slightly thicker text */
+    background: linear-gradient(white, #72673b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 5px 10px; /* Padding for better border appearance */
+}
+
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    right: 10px; /* Align to the right */
+    width: auto; /* Auto width to fit the content */
+    text-align: right; /* Align text to the right */
+}
+
+footer p {
+    font-size: 0.8em;
+    font-family: 'Young Serif', serif;
+    color: white;
+    margin: 0; /* Remove any default margin */
+}
